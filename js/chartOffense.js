@@ -32,8 +32,13 @@ async function init() {
     }
 
     var mousemove = function (d) {
+        let htmlToolTip = "<p><b><u>" + d.Squad + "</u></b></p>"
+        + "<p><b>Goals: " + parseInt(d.Gls) + "</b></p>"
+        + "<p><b>Assists: " + parseInt(d.Ast) + "</b></p>"
+        + "<p><b>Goals per 90 Minutes: " + parseFloat(d.Gls90) + "</b></p>"
+        + "<p><b>Assists per 90 Minutes: " + parseFloat(d.Ast90) + "</b></p>"
         tooltip
-            .html("Text: ")
+            .html(htmlToolTip)
             .style("left", (d3.mouse(this)[0] + 80) + "px")
             .style("top", (d3.mouse(this)[1] + 50) + "px")
     }
