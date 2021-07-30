@@ -1,5 +1,4 @@
-,,,,Playing Time,Playing Time,Playing Time,Playing Time,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Expected,Expected,Expected,Expected,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes,Per 90 Minutes
-Squad,# Pl,Age,Poss,MP,Starts,Min,90s,Gls,Ast,G-PK,PK,PKatt,CrdY,CrdR,Gls,Ast,G+A,G-PK,G+A-PK,xG,npxG,xA,npxG+xA,xG,xA,xG+xA,npxG,npxG+xA
+Squad,# Pl,Age,Poss,MP,Starts,Min,90s,Gls,Ast,G-PK,PK,PKatt,CrdY,CrdR,Gls90,Ast90,G+A90,G-PK90,G+A-PK90,xG,npxG,xA,npxG+xA,xG,xA,xG+xA,npxG,npxG+xA
 Arsenal,29,25.9,53.8,38,418,3420,38.0,53,38,47,6,6,49,5,1.39,1.00,2.39,1.24,2.24,53.5,49.0,36.6,85.5,1.41,0.96,2.37,1.29,2.25
 Aston Villa,24,25.2,48.1,38,418,3420,38.0,52,38,47,5,6,71,4,1.37,1.00,2.37,1.24,2.24,52.9,48.5,37.1,85.6,1.39,0.98,2.37,1.28,2.25
 Brighton,27,25.8,51.3,38,418,3420,38.0,39,24,33,6,9,49,6,1.03,0.63,1.66,0.87,1.50,51.6,44.8,33.0,77.8,1.36,0.87,2.23,1.18,2.05
