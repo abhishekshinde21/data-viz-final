@@ -112,7 +112,7 @@ async function init() {
             className: "show-bg",
             dy: -50,
             dx: 100,
-            y: y_scale(parseInt(data.filter(d => d.Squad == "Manchester City")[0].CSPercentage)),
+            y: y_scale(parseFloat(data.filter(d => d.Squad == "Manchester City")[0].CSPercentage)),
             x: x_scale(parseInt(data.filter(d => d.Squad == "Manchester City")[0].GoA)),
         },{
             note: {
@@ -123,7 +123,7 @@ async function init() {
             className: "show-bg",
             dy: 20,
             dx: -10,
-            y: y_scale(parseInt(data.filter(d => d.Squad == "Liverpool")[0].CSPercentage)),
+            y: y_scale(parseFloat(data.filter(d => d.Squad == "Liverpool")[0].CSPercentage)),
             x: x_scale(parseInt(data.filter(d => d.Squad == "Liverpool")[0].GoA)), 
 
         }

@@ -105,4 +105,29 @@ async function init() {
         .selectAll("text")
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
+
+    // add annotations
+    const annotations = [
+        {
+            note: {
+                label: "Team had the highest pass completion rate of 88.3%",
+                bgPadding: 20,
+                title: "Manchester City"
+            },
+            className: "show-bg",
+            dy: -10,
+            dx: 20,
+            y: y_scale(parseFloat(data.filter(d => d.Squad == "Manchester City")[0].Poss)),
+            x: x_scale(data.filter(d => d.Squad == "Manchester City")[0].Squad),
+        }
+    ]
+
+    const makeAnnotations = d3.annotation()
+        .type(d3.annotationCalloutElbow)
+        .annotations(annotations)
+
+    chart
+        .append("g")
+        .attr("class", "annotation-group")
+        .call(makeAnnotations)
 }
