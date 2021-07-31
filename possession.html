@@ -1,4 +1,5 @@
 <html>
+<script src='https://d3js.org/d3.v5.min.js'></script>
 
 <head>
     <title>Manchester City: Dominance of English Football</title>
@@ -13,10 +14,16 @@
 
 </head>
 
-<body>
+<body onload="init()">
     <div class="container-fluid px-0">
         <div class="jumbotron">
-            <h1>Hello World</h1>
+            <div class="container">
+                <div class="row">
+                    <h3 class="display-4">Possession by Each Premier League Team</h3>
+                    <div class="col-xs-12 col-lg-6" id="chartPossession">
+                    </div>
+                </div>
+            </div>
             <hr class="my-4">
             <a class="btn btn-primary btn-lg" href="offense.html" role="button">Go Back</a>
         </div>
@@ -34,6 +41,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+        <script src="js/chartPossession.js"></script>
 </body>
 
 </html>
