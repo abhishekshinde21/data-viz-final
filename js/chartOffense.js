@@ -33,10 +33,10 @@ async function init() {
 
     var mousemove = function (d) {
         let htmlToolTip = "<p><b><u>" + d.Squad + "</u></b></p>"
-        + "<p><b>Goals: " + parseInt(d.Gls) + "</b></p>"
-        + "<p><b>Assists: " + parseInt(d.Ast) + "</b></p>"
-        + "<p><b>Goals per 90 Minutes: " + parseFloat(d.Gls90) + "</b></p>"
-        + "<p><b>Assists per 90 Minutes: " + parseFloat(d.Ast90) + "</b></p>"
+            + "<p><b>Goals: " + parseInt(d.Gls) + "</b></p>"
+            + "<p><b>Assists: " + parseInt(d.Ast) + "</b></p>"
+            + "<p><b>Goals per 90 Minutes: " + parseFloat(d.Gls90) + "</b></p>"
+            + "<p><b>Assists per 90 Minutes: " + parseFloat(d.Ast90) + "</b></p>"
         tooltip
             .html(htmlToolTip)
             .style("left", (d3.mouse(this)[0] + 80) + "px")
@@ -100,5 +100,47 @@ async function init() {
         .attr("y", margin - 35)
         .attr("x", margin - 120)
         .text(y_label);
+
+
+    // add annotations
+    const annotations = [
+        {
+            note: {
+                label: "İlkay Gündoğan led the team with 13 goals, and Kevin De Bruyne led the team with 12 assists",
+                bgPadding: 20,
+                title: "Manchester City"
+            },
+            className: "show-bg",
+            dy: 50,
+            dx: 100,
+            y: y_scale(parseInt(data.filter(d => d.Squad == "Manchester City")[0].Gls)),
+            x: x_scale(parseInt(data.filter(d => d.Squad == "Manchester City")[0].Ast)),
+        },{
+            note: {
+                label: "Golden Boot winner: Harry Kane scores 23 goals",
+                bgPadding: 20,
+                title: "Tottenham"
+            },
+            className: "show-bg",
+            dy: -50,
+            dx: -10,
+            y: y_scale(parseInt(data.filter(d => d.Squad == "Tottenham")[0].Gls)),
+            x: x_scale(parseInt(data.filter(d => d.Squad == "Tottenham")[0].Ast)), 
+
+        }
+    ]
+
+    const makeAnnotations = d3.annotation()
+        // .editMode(true)
+        //also can set and override in the note.padding property
+        //of the annotation object
+        // .notePadding(15)
+        .type(d3.annotationCalloutElbow)
+        .annotations(annotations)
+
+    chart
+        .append("g")
+        .attr("class", "annotation-group")
+        .call(makeAnnotations)
 
 }
