@@ -131,10 +131,6 @@ async function init() {
     ]
 
     const makeAnnotations = d3.annotation()
-        // .editMode(true)
-        //also can set and override in the note.padding property
-        //of the annotation object
-        // .notePadding(15)
         .type(d3.annotationCalloutElbow)
         .annotations(annotations)
 

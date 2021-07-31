@@ -101,4 +101,41 @@ async function init() {
         .attr("x", margin - 120)
         .text(y_label);
 
+    // add annotations
+    const annotations = [
+        {
+            note: {
+                label: "Goalkeeper Edersen wins consecutive Golden Glove award in 2021",
+                bgPadding: 20,
+                title: "Manchester City"
+            },
+            className: "show-bg",
+            dy: -50,
+            dx: 100,
+            y: y_scale(parseInt(data.filter(d => d.Squad == "Manchester City")[0].CSPercentage)),
+            x: x_scale(parseInt(data.filter(d => d.Squad == "Manchester City")[0].GoA)),
+        },{
+            note: {
+                label: "2019 Golden Glove winner: goalkeeper Alisson",
+                bgPadding: 20,
+                title: "Liverpool"
+            },
+            className: "show-bg",
+            dy: 20,
+            dx: -10,
+            y: y_scale(parseInt(data.filter(d => d.Squad == "Liverpool")[0].CSPercentage)),
+            x: x_scale(parseInt(data.filter(d => d.Squad == "Liverpool")[0].GoA)), 
+
+        }
+    ]
+
+    const makeAnnotations = d3.annotation()
+        .type(d3.annotationCalloutElbow)
+        .annotations(annotations)
+
+    chart
+        .append("g")
+        .attr("class", "annotation-group")
+        .call(makeAnnotations)
+
 }
