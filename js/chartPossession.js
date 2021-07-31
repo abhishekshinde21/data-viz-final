@@ -1,4 +1,4 @@
-var svg = d3.select('#chartPossession').append('svg').attr("width", 700).attr("height", 500);
+var svg = d3.select('#chartPossession').append('svg').attr("width", 760).attr("height", 560);
 
 async function init() {
     // Acquire data

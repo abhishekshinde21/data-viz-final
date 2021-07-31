@@ -19,14 +19,39 @@
         <div class="jumbotron">
             <div class="container">
                 <div class="row">
-                    <h3 class="display-4">Possession by Each Premier League Team</h3>
-                    <div class="col-xs-12 col-lg-6" id="chartPossession">
+                    <h3 class="display-4">Possession (%) by Each Premier League Team</h3>
+                    <div class="col-xs-12 col-lg-8" id="chartPossession"></div>
+                    <div class="col-xs-12 col-sm-4">
+                        <ul>
+                            <li class="lead"> Please <b>hover</b> over each bar marker in the plot to
+                                get more information in the form of a central tooltip. </li>
+                        </ul>
                     </div>
+                </div>
+                <br>
+                <div class="row">
+                    <p class="lead"> Possession is the percentage of the total successful passes in a game. Manchester
+                        City (MC) is known for the "tiki-taka" style of play, in which they control the game with
+                        accurate
+                        short passes and regaining control of the ball if lost. This allows the team to keep composure
+                        and potentially frustrate opponents; in addition, having this technical ability promotes scoring
+                        goals from optimal options, alleviates players from running as much, and build out of opponent
+                        pressing.
+                    </p>
+                    <br>
+                    <p class="lead"> As the chart indicates, MC led the league in possession, with 63.9% followed by
+                        Liverpool with 62.4%. Examining MC's tooltip, the team's players also averaged the highest
+                        progressive distance, which is the total yards the players controlled the ball as they
+                        approached the opponent's goal. Along with leading the offensive and possession-based measured, 
+                        MC led on the defensive end. Press the button on the bottom right to find out how. 
+
+                    </p>
                 </div>
             </div>
             <hr class="my-4">
             <a class="btn btn-primary btn-lg" href="offense.html" role="button">Go Back</a>
-            <a class="btn btn-primary btn-lg float-right" href="defense.html" role="button">Click Here for Defense Stats</a>
+            <a class="btn btn-primary btn-lg float-right" href="defense.html" role="button">Click Here for Defense
+                Stats</a>
         </div>
     </div>
 
@@ -42,7 +67,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-        <script src="js/chartPossession.js"></script>
+    <script src="js/chartPossession.js"></script>
 </body>
 
 </html>
