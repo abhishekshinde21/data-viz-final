@@ -1,5 +1,4 @@
-,,Playing Time,Playing Time,Playing Time,Playing Time,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Performance,Penalty Kicks,Penalty Kicks,Penalty Kicks,Penalty Kicks,Penalty Kicks
-Squad,# Pl,MP,Starts,Min,90s,GA▼,GA90,SoTA,Saves,Save%,W,D,L,CS,CS%,PKatt,PKA,PKsv,PKm,Save%
+Squad,# Pl,MP,Starts,Min,90s,GoA,GA90,SoTA,Saves,Save%,Wi,Dr,Lo,CS,CSPercentage,PKatt,PKA,PKsv,PKm,Save%
 West Brom,2,38,38,3420,38.0,76,2.00,235,166,70.6,5,11,22,6,15.8,12,7,2,3,22.2
 Southampton,2,38,38,3420,38.0,68,1.79,169,109,64.5,12,7,19,9,23.7,9,8,1,0,11.1
 Crystal Palace,2,38,38,3420,38.0,66,1.74,173,108,63.6,12,8,18,8,21.1,4,3,1,0,25.0
