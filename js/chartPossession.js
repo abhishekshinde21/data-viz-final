@@ -91,6 +91,23 @@ async function init() {
         .attr("transform", "translate(-10,0)rotate(-45)")
         .style("text-anchor", "end");
 
+    // add labels to axes on chart
+    x_label = "Team";
+    y_label = "Possession (%)";
+    d3.select("svg")
+        .append("text")
+        .attr("text-anchor", "end")
+        .attr("x", width)
+        .attr("y", height + 2 * margin)
+        .text(x_label);
+    d3.select("svg")
+        .append("text")
+        .attr("text-anchor", "end")
+        .attr("transform", "rotate(-90)")
+        .attr("y", margin - 35)
+        .attr("x", margin - 180)
+        .text(y_label);
+
     // add annotations
     const annotations = [
         {
