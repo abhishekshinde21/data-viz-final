@@ -7,13 +7,9 @@ async function init() {
     data.sort(function (b, a) {
         return parseFloat(a.Poss) - parseFloat(b.Poss);
     });
-    console.log("Data: ", data);
 
     // Setup dimensions
     var margin = 80;
-    // var width = document.getElementById('chartOffense').clientWidth;
-    // var height = document.getElementById('chartOffense').clientHeight;
-    // temp dims
     var width = 600;
     var height = 400;
 
@@ -29,22 +25,11 @@ async function init() {
         .style("padding", "10px")
 
     var mouseover = function (d) {
-        console.log("Mouse over")
-        // let htmlToolTip = "<p><b><u>" + d.Squad + "</u></b></p>"
-        //     + "<p><b>Total Touches: " + parseInt(d.Touches) + "</b></p>"
-        //     + "<p><b>Carries: " + parseInt(d.Carries) + "</b></p>"
-        //     + "<p><b>Progressive Distance: " + parseFloat(d.PrgDist) + "</b></p>";
-
         tooltip
-            // .html(htmlToolTip)
             .style("opacity", 1)
-            // .style("left", (d3.mouse(this)[0] + 80) + "px")
-            // .style("top", (d3.mouse(this)[1] + 50) + "px")
-
     }
 
     var mousemove = function (d) {
-        console.log("Mouse move")
         let htmlToolTip = "<p><b><u>" + d.Squad + "</u></b></p>"
         + "<p><b>Possession (%): " + parseFloat(d.Poss) + "</b></p>"
             + "<p><b>Total Touches: " + parseInt(d.Touches) + "</b></p>"

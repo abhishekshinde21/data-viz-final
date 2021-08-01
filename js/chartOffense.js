@@ -3,15 +3,11 @@ var svg = d3.select('#chartOffense').append('svg').attr("width", 700).attr("heig
 async function init() {
     // Acquire data
     data = await d3.csv("data/squad_standard.csv");
-    console.log("Data: ", data);
     let y_label = "Goals";
     let x_label = "Assists";
 
     // setup dimensions
     var margin = 50;
-    // var width = document.getElementById('chartOffense').clientWidth;
-    // var height = document.getElementById('chartOffense').clientHeight;
-    // temp dims
     var width = 600;
     var height = 400;
 
